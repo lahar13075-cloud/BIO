@@ -182,7 +182,8 @@ function renderStage(){
     card.id="card"+i;
     card.style.display="none";
 
-    let html = `<div class='qtext'><strong>Q${i+1}.</strong> ${q.q}</div><div class='options'>`;
+    let html = `<div class='qtext'><strong>Q${order.indexOf(i)+1}.</strong>
+ ${q.q}</div><div class='options'>`;
 
     q.opts.forEach((o,j)=>{
       const letter = ["A","B","C","D"][j];
@@ -253,11 +254,15 @@ function submitTest(){
 
   const name = $('username').value.trim() || 'User';
 
-  $('result').innerHTML = `
-    <div style="font-size:22px;font-weight:700;margin-bottom:12px">
-      ${capitalize(name)}, your score is ${score}/${questions.length}
-    </div>
-  `;
+ $('result').innerHTML = `
+  <div style="font-size:22px;font-weight:700;margin-bottom:12px">
+    ${capitalize(name)}, your score is ${score}/${questions.length}
+  </div>
+
+  <button class="btn ripple" style="margin-top:12px" onclick="finishTest()">
+    Finish / Exit
+  </button>
+`;
 
   if(wrongCount > 0){
     const btn = document.createElement('button');
@@ -324,3 +329,8 @@ function showAnswerPopup(){
   document.body.appendChild(overlay);
 }
   });
+function finishTest(){
+  if(confirm("Are you sure you want to exit the test?")){
+    window.location.reload(); // safest way to exit
+  }
+}
