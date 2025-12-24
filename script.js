@@ -1,5 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
 // ---------- 100 BIOLOGY QUESTIONS ----------
-
 const questions = [
 
   { q: "The nose of the redesigned Shinkansen bullet train is inspired by?", opts: ["Kingfisher beak","Crane peak","Owl peak","Herons peak"], answer: "A" },
@@ -155,8 +155,7 @@ function showQuestion(pos){
 
   cur = pos;
   $("progressText").innerText = `Question ${cur+1} / ${questions.length}`;
-  $("progressBar").style.width = (cur/questions.length)*100 + "%";
-
+ $("progressBar").style.width = ((cur + 1) / questions.length) * 100 + "%";
   $("prevBtn").style.display = cur>0 ? "inline-block" : "none";
   $("nextBtn").innerText = cur<questions.length-1 ? "Next" : "Submit";
 }
@@ -272,4 +271,4 @@ function showAnswerPopup(){
   overlay.appendChild(box);
   document.body.appendChild(overlay);
 }
-
+  });
