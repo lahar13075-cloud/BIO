@@ -216,7 +216,7 @@ function submitTest(){
     btn.onclick = showAnswerPopup;
     $('result').appendChild(btn);
   }
-});
+}
 function showAnswerPopup(){
   const overlay = document.createElement('div');
   overlay.style.position = 'fixed';
