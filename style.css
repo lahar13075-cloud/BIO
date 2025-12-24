@@ -83,3 +83,18 @@ h1{margin:0;font-size:20px}
   color:var(--accent);
   text-align:center;
 }
+@media (max-width: 640px){
+  .qstage{
+    height: auto;
+    min-height: 200px;
+  }
+
+  .question-card{
+    position: relative;
+  }
+
+  .controls{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
