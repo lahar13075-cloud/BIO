@@ -1,71 +1,69 @@
 document.addEventListener("DOMContentLoaded", () => {
 // ---------- 100 BIOLOGY QUESTIONS ----------
 const questions = [
+  { q:"The nose of the redesigned Shinkansen bullet train is inspired by?", opts:["Owl peak","Kingfisher beak","Crane peak","Herons peak"], answer:"B" },
+  { q:"Passive cooling in skyscrapers is inspired by?", opts:["Ant mounds","Earth mounds","Termite mounds","Spiro mounds"], answer:"C" },
+  { q:"Belt movement of military tanks was inspired by?", opts:["Butterfly movement","Caterpillar movement","Ant movement","Termite movement"], answer:"B" },
+  { q:"Retinal prosthetic developed by scientists is approved by?", opts:["USEPA","CPCB","USFDA","SPCB"], answer:"C" },
+  { q:"Gene used to develop genetically modified corn is from?", opts:["Bacillus cereus","Bacillus thuringiensis","Bacillus anthracis","Bacillus subtilis"], answer:"B" },
 
-  { q: "The nose of the redesigned Shinkansen bullet train is inspired by?", opts: ["Kingfisher beak","Crane peak","Owl peak","Herons peak"], answer: "A" },
-  { q: "Passive cooling in skyscrapers is inspired by?", opts: ["Termite mounds","Earth mounds","Ant mounts","Spiro mounds"], answer: "A" },
-  { q: "Belt movement of military tanks was inspired by?", opts: ["Caterpillar movement","Termite movement","Ant movement","Butterfly movement"], answer: "A" },
-  { q: "Retinal prosthetic developed by scientists is approved by?", opts: ["USFDA","USEPA","CPCB","SPCB"], answer: "A" },
-  { q: "Gene used to develop genetically modified corn is from?", opts: ["Bacillus thuringiensis","Bacillus cereus","Bacillus subtilis","Bacillus anthracis"], answer: "A" },
+  { q:"Protein produced by Bacillus thuringiensis with insecticidal property is?", opts:["Try protein","Res protein","Cry protein","Taf protein"], answer:"C" },
+  { q:"Biofertilizers help to?", opts:["Reduce soil fertility","Replace chemical nitrogen and phosphorus","Reduce crop yield","Destimulate plant growth"], answer:"B" },
+  { q:"Microstructure analysis of self-healing concrete is done using?", opts:["XRD","SEM","FTIR","XPS"], answer:"B" },
+  { q:"Pollution control technique using bioreactor with living material is?", opts:["Bioleaching","Bioaugmentation","Biofiltration","Biomimetics"], answer:"C" },
+  { q:"Nanoparticle size ranges between?", opts:["1–10 µm","1–100 nm","1–100 mm","1–1000 nm"], answer:"B" },
 
-  { q: "Protein produced by Bacillus thuringiensis with insecticidal property is?", opts: ["Cry protein","Res protein","Try protein","Taf protein"], answer: "A" },
-  { q: "Biofertilizers help to?", opts: ["Replace chemical nitrogen and phosphorus","Reduce crop yield","Reduce soil fertility","Destimulate plant growth"], answer: "A" },
-  { q: "Microstructure analysis of self-healing concrete is done using?", opts: ["SEM","XRD","FTIR","XPS"], answer: "A" },
-  { q: "Pollution control technique using bioreactor with living material is?", opts: ["Biofiltration","Bioaugmentation","Bioleaching","Biomimetics"], answer: "A" },
-  { q: "Nanoparticle size ranges between?", opts: ["1–100 nm","1–100 mm","1–1000 nm","1–10 µm"], answer: "A" },
+  { q:"Prokaryotic cell size ranges from?", opts:["10–50 μm","0.1–5.0 μm","2–10 μm","0.1–50 μm"], answer:"B" },
+  { q:"Cells without true nucleus are?", opts:["Eukaryotic cells","Plant cells","Prokaryotic cells","Animal cells"], answer:"C" },
+  { q:"Histone protein is present in?", opts:["Plasmids","Viruses","Eukaryotic chromosomes","Prokaryotic chromosomes"], answer:"C" },
+  { q:"Asexual reproduction in prokaryotes occurs by?", opts:["Conjugation","Binary fission","Ligation","Mitosis"], answer:"B" },
+  { q:"Protein synthesis occurs in?", opts:["Mitochondria","Ribosomes","Lysosomes","Vacuoles"], answer:"B" },
 
-  { q: "Prokaryotic cell size ranges from?", opts: ["0.1–5.0 μm","0.1–50 μm","10–50 μm","2–10 μm"], answer: "A" },
-  { q: "Cells without true nucleus are?", opts: ["Prokaryotic cells","Eukaryotic cells","Plant cells","Animal cells"], answer: "A" },
-  { q: "Histone protein is present in?", opts: ["Eukaryotic chromosomes","Prokaryotic chromosomes","Plasmids","Viruses"], answer: "A" },
-  { q: "Asexual reproduction in prokaryotes occurs by?", opts: ["Binary fission","Conjugation","Mitosis","Ligation"], answer: "A" },
-  { q: "Protein synthesis occurs in?", opts: ["Ribosomes","Lysosomes","Mitochondria","Vacuoles"], answer: "A" },
+  { q:"Virus can be observed using?", opts:["Light microscope","Electron microscope","Fluorescent microscope","Naked eye"], answer:"B" },
+  { q:"Cell wall of bacteria is made of?", opts:["Cellulose","Peptidoglycan","Protein","Chitin"], answer:"B" },
+  { q:"Gram positive bacteria appear ___ after gram staining?", opts:["Red","Pink","Purple","Brown"], answer:"C" },
+  { q:"Black bread mold is?", opts:["Mucor","Aspergillus niger","Rhizopus stolonifer","Candida albicans"], answer:"C" },
+  { q:"Greek word ‘Eu’ means?", opts:["Large","Well","Round","Embryo"], answer:"B" },
 
-  { q: "Virus can be observed using?", opts: ["Electron microscope","Light microscope","Naked eye","Fluorescent microscope"], answer: "A" },
-  { q: "Cell wall of bacteria is made of?", opts: ["Peptidoglycan","Cellulose","Protein","Chitin"], answer: "A" },
-  { q: "Gram positive bacteria appear ___ after gram staining?", opts: ["Purple","Pink","Red","Brown"], answer: "A" },
-  { q: "Black bread mold is?", opts: ["Rhizopus stolonifer","Aspergillus niger","Candida albicans","Mucor"], answer: "A" },
-  { q: "Greek word ‘Eu’ means?", opts: ["Well","Large","Round","Embryo"], answer: "A" },
+  { q:"Cell membrane is also called?", opts:["Cell wall","Plasma membrane","Nuclear membrane","Plasmalemma"], answer:"B" },
+  { q:"Energy currency of the cell is?", opts:["AMP","ATP","ADP","Adenosine"], answer:"B" },
+  { q:"Suicide bags of the cell are?", opts:["Centrioles","Vacuoles","Lysosomes","Centromeres"], answer:"C" },
+  { q:"Which is NOT a biomolecule?", opts:["Lipids","Carbohydrates","Calcium sulphate","Nucleic acids"], answer:"C" },
+  { q:"Fatty acids without double bonds are?", opts:["Trans","Unsaturated","Saturated","Cis"], answer:"C" },
 
-  { q: "Cell membrane is also called?", opts: ["Plasma membrane","Plasmalemma","Cell wall","Nuclear membrane"], answer: "A" },
-  { q: "Energy currency of cell is?", opts: ["ATP","ADP","AMP","Adenosine"], answer: "A" },
-  { q: "Suicide bags of the cell are?", opts: ["Lysosomes","Centrioles","Vacuoles","Centromeres"], answer: "A" },
-  { q: "Which is NOT a biomolecule?", opts: ["Calcium sulphate","Carbohydrates","Lipids","Nucleic acids"], answer: "A" },
-  { q: "Fatty acids without double bonds are?", opts: ["Saturated","Unsaturated","Cis","Trans"], answer: "A" },
+  { q:"Starch is a?", opts:["Monosaccharide","Disaccharide","Polysaccharide","Oligosaccharide"], answer:"C" },
+  { q:"Peptide bond joins?", opts:["Sugars","Amino acids","Fatty acids","Nucleotides"], answer:"B" },
+  { q:"Alpha helix and beta sheet are?", opts:["Primary","Secondary protein structures","Tertiary","Quaternary"], answer:"B" },
+  { q:"Antibodies are?", opts:["Lipids","Proteins","Carbohydrates","Fats"], answer:"B" },
+  { q:"RNA synthesis from DNA is called?", opts:["Translation","Replication","Transcription","Transfusion"], answer:"C" },
 
-  { q: "Starch is a?", opts: ["Polysaccharide","Monosaccharide","Disaccharide","Oligosaccharide"], answer: "A" },
-  { q: "Peptide bond joins?", opts: ["Amino acids","Sugars","Fatty acids","Nucleotides"], answer: "A" },
-  { q: "Alpha helix and beta sheet are?", opts: ["Secondary protein structures","Primary","Tertiary","Quaternary"], answer: "A" },
-  { q: "Antibodies are?", opts: ["Proteins","Lipids","Carbohydrates","Fats"], answer: "A" },
-  { q: "RNA synthesis from DNA is called?", opts: ["Transcription","Translation","Replication","Transfusion"], answer: "A" },
+  { q:"DNA strands are?", opts:["Parallel","Antiparallel","Horizontal","Oblique"], answer:"B" },
+  { q:"Photosynthesis occurs in?", opts:["Mitochondria","Ribosome","Chloroplast","Nucleus"], answer:"C" },
+  { q:"Calvin cycle occurs in?", opts:["Grana","Thylakoid","Stroma","Chlorophyll"], answer:"C" },
+  { q:"ATP is a?", opts:["Protein","Nucleotide","Lipid","Carbohydrate"], answer:"B" },
+  { q:"Aerobic respiration yields how many ATP?", opts:["18","22","38","2"], answer:"C" },
 
-  { q: "DNA strands are?", opts: ["Antiparallel","Parallel","Horizontal","Oblique"], answer: "A" },
-  { q: "Photosynthesis occurs in?", opts: ["Chloroplast","Mitochondria","Ribosome","Nucleus"], answer: "A" },
-  { q: "Calvin cycle occurs in?", opts: ["Stroma","Grana","Thylakoid","Chlorophyll"], answer: "A" },
-  { q: "ATP is a?", opts: ["Nucleotide","Protein","Lipid","Carbohydrate"], answer: "A" },
-  { q: "Aerobic respiration yields how many ATP?", opts: ["38","2","18","22"], answer: "A" },
+  { q:"Glycolysis produces?", opts:["CO₂","Oxygen","Pyruvate","Lactate"], answer:"C" },
+  { q:"DNA replication enzyme is?", opts:["Ligase","Helicase","DNA polymerase","RNA polymerase"], answer:"C" },
+  { q:"Interphase occurs during?", opts:["Cell growth","Cytokinesis","Chromatid separation","Spindle formation"], answer:"A" },
+  { q:"Chromatids are joined by?", opts:["Spindle","Microtubules","Centromere","Cytoskeleton"], answer:"C" },
+  { q:"Photosynthesis raw materials are?", opts:["Oxygen and water","CO₂ and water","Carbon monoxide","Hydrogen and oxygen"], answer:"B" },
 
-  { q: "Glycolysis produces?", opts: ["Pyruvate","Lactate","CO2","Oxygen"], answer: "A" },
-  { q: "DNA replication enzyme is?", opts: ["DNA polymerase","RNA polymerase","Ligase","Helicase"], answer: "A" },
-  { q: "Interphase occurs during?", opts: ["Cell growth","Chromatid separation","Cytokinesis","Spindle formation"], answer: "A" },
-  { q: "Chromatids are joined by?", opts: ["Centromere","Spindle","Microtubules","Cytoskeleton"], answer: "A" },
-  { q: "Photosynthesis raw materials are?", opts: ["CO₂ and water","Oxygen and water","Hydrogen and oxygen","Carbon monoxide"], answer: "A" },
+  { q:"Biodegradable leather was developed in?", opts:["USA","Mexico","Canada","Brazil"], answer:"B" },
+  { q:"Cactus leather is also known as?", opts:["Indian cactus","Prickly pear","Breathing leaf","Arborea"], answer:"B" },
+  { q:"Biodegradable leather company is?", opts:["Arman","Lakhaani","Desserto","Exhale"], answer:"C" },
+  { q:"Bionic chandelier was designed by?", opts:["Leonardo da Vinci","Julian Melchiorri","Igor Sikorsky","Shannon"], answer:"B" },
+  { q:"Bionic chandelier purifies air using?", opts:["Filters","Fans","Photosynthetic algae","Carbon traps"], answer:"C" },
 
-  { q: "Biodegradable leather was developed in?", opts: ["Mexico","USA","Canada","Brazil"], answer: "A" },
-  { q: "Cactus leather is also known as?", opts: ["Prickly pear","Indian cactus","Breathing leaf","Arborea"], answer: "A" },
-  { q: "Biodegradable leather company is?", opts: ["Desserto","Lakhaani","Arman","Exhale"], answer: "A" },
-  { q: "Bionic chandelier was designed by?", opts: ["Julian Melchiorri","Leonardo da Vinci","Igor Sikorsky","Shannon"], answer: "A" },
-  { q: "Bionic chandelier purifies air using?", opts: ["Photosynthetic algae","Filters","Fans","Carbon traps"], answer: "A" },
+  { q:"Solar powered pest control was developed at?", opts:["IIT Madras","IIT Bombay","IIT Kharagpur","IIT Kanpur"], answer:"C" },
+  { q:"BioDCM pesticide protects from?", opts:["Viral infection","Bacterial only","Bacterial & fungal infection","Fungal only"], answer:"C" },
+  { q:"BioDCM is extracted from?", opts:["E. coli","Virus","Trichoderma asperellum","Bacillus anthracis"], answer:"C" },
+  { q:"Continuous glucose monitoring device is?", opts:["Glucometer","CGM","Insulin pump","Pacemaker"], answer:"B" },
+  { q:"Robotic surgery was first used in?", opts:["1995","1897","1987","2001"], answer:"C" },
 
-  { q: "Solar powered pest control was developed at?", opts: ["IIT Kharagpur","IIT Madras","IIT Bombay","IIT Kanpur"], answer: "A" },
-  { q: "BioDCM pesticide protects from?", opts: ["Bacterial & fungal infection","Bacterial only","Fungal only","Viral"], answer: "A" },
-  { q: "BioDCM is extracted from?", opts: ["Trichoderma asperellum","Bacillus anthracis","E. coli","Virus"], answer: "A" },
-  { q: "Continuous glucose monitoring device is?", opts: ["CGM","Glucometer","Insulin pump","Pacemaker"], answer: "A" },
-  { q: "Robotic surgery first used in?", opts: ["1987","1897","2001","1995"], answer: "A" },
-
-  { q: "Pacemaker condition caused by blocked impulses is?", opts: ["Heart block","Heart attack","Heart clog","Arrhythmia"], answer: "A" },
-  { q: "Bionic eye stimulates?", opts: ["Optic nerve","Cornea","Lens","Retina"], answer: "A" },
-  { q: "Cochlear implant converts sound using?", opts: ["Sound processor","Battery","Electrode","Amplifier"], answer: "A" }
-
+  { q:"Pacemaker condition caused by blocked impulses is?", opts:["Arrhythmia","Heart attack","Heart block","Heart clog"], answer:"C" },
+  { q:"Bionic eye stimulates?", opts:["Lens","Cornea","Optic nerve","Retina"], answer:"C" },
+  { q:"Cochlear implant converts sound using?", opts:["Battery","Electrode","Sound processor","Amplifier"], answer:"C" }
 ];
 let order = [];
 let userAnswers = {};
@@ -106,7 +104,7 @@ $("startBtn").onclick=()=>{
   $("startPage").style.display="none";
   $("quiz").style.display="block";
 
-  remainingSeconds = 30 * 60;
+  remainingSeconds = 60 * 60;
   $("timerText").innerText = formatTime(remainingSeconds);
 
   timerInterval = setInterval(()=>{
